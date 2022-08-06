@@ -1,61 +1,144 @@
 function negate(a) {
-  // your code here
+  if (a === true) {
+    return false;
+    } else {
+    return true;
+    }
 };
 
 function both(a, b) {
-  // your code here
+  if (a && b === true) { 
+    return true
+  } else { 
+    return false
+  }
 };
 
 function either(a, b) {
-  // your code here
+  if (a === true | b === true) {
+    return true 
+  } else {
+    return false
+  }
 };
 
 function none(a, b) {
-  // your code here
-};
+  if (a === false && b === false) {
+    return true
+  } else {
+    return false
+    }
+  };
 
 function one(a, b) {
-  // your code here
+  if (a === true && b === false || a === false && b === true) {
+    return true 
+  } else {
+    return false
+  }
 };
 
 function truthiness(a) {
-  // your code here
+  if (a) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function isEqual(a, b) {
-  // your code here
+  if (a === b) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function isGreaterThan(a, b) {
-  // your code here
+  if (a > b) {
+    return true 
+  } else { 
+    return false
+  }
 };
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
+  if (a <= b) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function isOdd(a) {
-  // your code here
+  if (a % 2 == 0) {
+    return false
+  } else {
+    return true
+  }
 };
 
 function isEven(a) {
-  // your code here
+  if (a % 2 == 0) {
+    return true
+  } else {
+    return false
+  }
 };
 
 function isSquare(a) {
-  // your code here
+  const b = Math.trunc(Math.sqrt(a))
+
+  if (a === b*b) { 
+    return true
+  } else {
+    return false
+  }
 };
 
 function startsWith(char, string) {
-  // your code here
+  if (char === string.charAt(0)) {
+    return true
+  } else { 
+    return false
+  }
 };
 
 function containsVowels(string) {
-  // your code here
+
+  const vowels = ['a','e','i','o','u']
+
+  let count = 0
+
+  for (let letter of string.toLowerCase()) {
+    if (vowels.includes(letter)) {
+      count++
+    }
+  }
+
+  if (count >= 1) {
+    return true
+  } else {
+    return false
+  }
+
 };
 
 function isLowerCase(string) {
-  // your code here
+  const upperCase = ['A', 'B', 'C', 'D']
+    let count = 0
+  for (let letter of string) {
+    if (upperCase.includes(letter)) {
+      count++
+    }
+  }
+
+  if (count >= 1) {
+    return false
+  } else {
+    return true
+  }
+
 };
 
 module.exports = {
